@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="to_do.css"/>
+</head>
+<body>
+<header>
+    <h1>TO DO LIST</h1>
+
+</header>
+
+<aside>
+    <form method="post">
+        <input type="text" name="task" placeholder="Nazwa zadania">
+        <br>
+        Data <input type="date" name="task_date">
+        <br>
+        Godzina od<input type="time" name="hour_from">
+        do<input type="time" name="hour_to">
+        <button type="submit">Add</button>
+    </form>
+    <?php
+$conn = mysqli_connect("localhost","root","","ToDoList");
+if(mysqli_connect_errno()){
+    exit();
+}
+if(isset($_POST['task']) && !empty($_POST['task']) && isset($_POST['task_date']) && !empty($_POST['task_date']) 
+&& isset($_POST['hour_from']) && !empty($_POST['hour_from']) && isset($_POST['hour_to']) && !empty($_POST['hour_to'])){
+    
+    $task = $_POST['task'];
+    $task_date = $_POST['task_date'];
+    $hour_from = $_POST['hour_from'];
+    $hour_to = $_POST['hour_to'];
+    $sql1 = "INSERT INTO lista(nazwa,task_date,hour_from,hour_to) VALUES ('$task', '$task_date', '$hour_from', '$hour_to')";
+    mysqli_query($conn, $sql1);
+}
+ else{
+    echo "Nie podano wszystkich informacji";
+}
+
+
+
+mysqli_close($conn);
+?>
+</aside>
+<section>
+<?php
+$conn = mysqli_connect("localhost","root","","ToDoList");
+if(mysqli_connect_errno()){
+    exit();
+}
+$sql2 = "SELECT * FROM lista";
+$result = mysqli_query($conn, $sql2);
+
+while($row = mysqli_fetch_assoc($result)){
+    if($row['task_date'] < date('Y-m-d') || ($row['task_date'] == date('Y-m-d') && $row['hour_to'] < date('H-mm'))) {
+        echo "<div style='opacity:0.5'>" ."<h4>". $row['nazwa'] ."</h4>" . 
+        "Data: ". $row['task_date'] . "<br>". 
+        "Od: ".$row['hour_from']. "<br>". "do: ".$row['hour_to']. "<br>".
+        "<form method='POST'>" ."<button type='submit' name='del_button'>Done</button>"//onclick
+        . "</form>" ."</div>";
+        $idik = $row['id_zadania'];
+        if(isset($_POST['del_button'])){
+        $sql3 = "DELETE  FROM lista WHERE id_zadania=$idik";
+        mysqli_query($conn, $sql3);
+        }
+    }
+    else{
+        
+        echo "<div>" ."<h4>". $row['nazwa'] ."</h4>". 
+        "Data: " . $row['task_date'] . "<br>". 
+        "Od: ".$row['hour_from']. "<br>"."do: ".$row['hour_to']. "</div>";
+    }
+    
+    
+    
+}
+//|| $row['task_date'] = date('Y-m-d') &&
+//$row['hour_to'] < date('H-mm')
+
+
+mysqli_close($conn);
+?>
+
+</section>
+<footer>
+
+</footer>
+
+    
+
+    
+</body>
+</html>

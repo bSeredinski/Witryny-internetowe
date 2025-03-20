@@ -1,0 +1,47 @@
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header, footer {
+    color: white;
+    background-color: indigo;
+    text-align: center;
+    padding: 7px;
+}
+
+section {
+    background-color: #A1887F;
+    color: white;
+    padding: 10px;
+    text-align: right;
+}
+
+.con {
+    display: flex;
+}
+
+aside {
+    background-color: #d7ccc8;
+    width: 35%;
+    height: 550px;
+}
+
+nav {
+    background-color: #d7ccc8;
+    width: 65%;
+    height: 550px;
+}
+
+ol, a {
+    color: indigo;
+}
+
+img {
+    height: 240px;
+    padding: 6px;
+    border-radius: 20px;
+}
+
+img:hover {
+    box-shadow: 0px 0px 10px 2px indigo;
+}

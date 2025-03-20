@@ -1,0 +1,51 @@
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    box-sizing: border-box;
+}
+
+header, footer{
+    background-color: maroon;
+    text-align: center;
+    padding: 2px;
+}
+
+section {
+    display: flex;
+
+}
+
+span, .mainBlock{
+    background-color: lightsalmon;
+    height: 527px;
+    font-size: 50px;
+    padding: 0 7%;
+}
+
+span {
+    width: 15%;
+    color: maroon;
+    border: none;
+    display: block;
+    padding-top: 210px;
+}
+
+.mainBlock {
+    width: 70%;
+}
+
+.pasek{
+    height: 70px;
+    transition: 4s;
+    display: flex;
+
+}
+
+section img{
+    transition: 5s;
+
+}
+
+section img:hover{
+    transform: scale(120%);
+}

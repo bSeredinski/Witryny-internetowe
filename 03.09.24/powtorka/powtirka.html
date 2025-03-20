@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style></style>
+</head>
+<body>
+    <p class="tria">Wynagania dotyczące skryptu: <br> Podaj nuemr w procentach: </p>
+    <input type="number" id="procenty">
+    <select name="typ" id="typ">
+        <option value="none">Prosty</option>
+        <option value="italic">Kursywa</option>
+    </select>
+    <p>Jakim kolorem sformatować tekst?</p>
+    <input type="color" id="kolor">
+
+    <p id="txt">
+        To jest przykład paragrafu.
+    </p>
+
+    <button onclick="tekst()">click</button>
+
+    <script>
+
+        function tekst () {
+            let size = procenty.value;
+            let type = typ.value;
+            let kolorek = kolor.value;
+            txt.style.fontSize = size;
+            txt.style.fontStyle = type;
+            txt.style.color = kolorek;
+        }
+    </script>
+</body>
+</html>
