@@ -1,0 +1,237 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+header {
+    width: 100%;
+    background-color: #1e3d58;
+    text-align: center;
+    padding: 30px 0;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    color: #f4f4f9;
+    font-size: 3em;
+    letter-spacing: 2px;
+}
+
+nav a {
+    margin: 0 20px;
+    color: #f4f4f9;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+    color: #ffdd57;
+    transform: scale(1.1);
+}
+
+section {
+    width: 100%;
+    padding: 80px 0;
+    background-color: #e3f2fd;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    line-height: 1.6;
+}
+
+section h2 {
+    font-size: 3em;
+    color: #1e3d58;
+    margin-bottom: 40px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Kontener tekstu w sekcji */
+.text-container {
+    background-color: #ffffff;
+    padding: 40px;
+    margin: 0 auto;
+    max-width: 800px;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    color: #555;
+    line-height: 1.8;
+}
+
+.text-container p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.text-container p:last-child {
+    margin-bottom: 0;
+}
+
+section p {
+    font-size: 1.15em;
+    color: #555;
+    margin-bottom: 30px;
+    padding: 0 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.slider button {
+    background: none;
+    border: none;
+    font-size: 2.5em;
+    cursor: pointer;
+    color: #1e3d58;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.slider button:hover {
+    color: #ffdd57;
+    transform: scale(1.2);
+}
+
+.slider img {
+    width: 80%;
+    height: auto;
+    transition: opacity 0.5s ease, transform 0.3s;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+article {
+    width: 100%;
+    padding: 70px 0;
+    background-color: #bbdefb;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+form {
+    display: inline-block;
+    text-align: left;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #333;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.1em;
+    box-sizing: border-box;
+}
+
+#zar {
+    width: 100%;
+    padding: 12px;
+    background-color: #1e3d58;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.3em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#zar:hover {
+    background-color: #ffdd57;
+    transform: scale(1.05);
+}
+
+main {
+    width: 100%;
+    padding: 60px 0;
+    background-color: #e3f2fd;
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 18%;
+    height: auto;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    width: 100%;
+    padding: 25px 0;
+    background-color: #1e3d58;
+    text-align: center;
+    color: white;
+    box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.1);
+}
+
+footer h3 {
+    margin: 0;
+    font-size: 1.7em;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #ffdd57;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+footer a:hover {
+    color: white;
+    transform: scale(1.1);
+}
